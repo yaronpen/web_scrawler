@@ -7,7 +7,7 @@ const main = async () => {
   const argv2 = process.argv.slice(3);
 
   const url = argv1[0];
-  const depth = argv2[0];
+  const depth = isNaN(argv2[0]) ? 0 : argv2[0];
 
   getUrls(url, depth);
 }
