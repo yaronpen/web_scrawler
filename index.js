@@ -5,10 +5,10 @@ import fs from 'fs';
 const main = async () => {
   const argv1 = process.argv.slice(2);
   const argv2 = process.argv.slice(3);
-  
+
   const url = argv1[0];
   const depth = argv2[0];
-  
+
   getUrls(url, depth);
 }
 
@@ -18,7 +18,7 @@ const getUrls = async (url, iterations) => {
   const images = [];
 
   arr.push(url);
-  
+
   for (let i = 0; i < iterations; i++) {
     if (i > 0) {
       arr.length = 0;
@@ -88,7 +88,6 @@ const getImages = ($, current_url, i) => {
   return images;
 }
 
-
 const request = async (data) => {
   const headers = {
     method: "GET",
@@ -105,6 +104,5 @@ const request = async (data) => {
 
   return req;
 }
-
 
 main();
