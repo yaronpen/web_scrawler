@@ -55,7 +55,7 @@ const getUrls = async (url, iterations) => {
     })
   }
   try {
-    fs.writeFile('result.json', JSON.stringify(images), (message) => {
+    fs.writeFile('results.json', JSON.stringify(images), (message) => {
       console.log(`succuess: ${message}`)
     });
   } catch (e) {
