@@ -67,7 +67,7 @@ const getA = ($, current_url) => {
   const semi_results = [];
   $('a').each((n, a) => {
     if (a.attribs.href) {
-      const value = a.attribs.href.substring(0, 3) == 'http' | a.attribs.href.substring(0, 3) == 'www' ? a.attribs.href : `${current_url}${a.attribs.href}`;
+      const value = a.attribs.href.substring(0, 3) == 'http' | a.attribs.href.substring(0, 2) == 'www' ? a.attribs.href : `${current_url}${a.attribs.href}`;
       semi_results.push(value);
     }
   })
